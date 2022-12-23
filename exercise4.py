@@ -6,7 +6,7 @@
 """
 import time
 
-#время последнего запуска функции another
+#время последнего запуска функции
 last_start_func = 0
 
 #декоратор логирования 
@@ -20,9 +20,9 @@ def logging(func):
 #декоратор времени выполнения
 def timing(func):
     def wrapper():
-        last_start_func = time.time()
+        start = time.time()
         func()
-        print(f'Время выполнения функции составило {time.time() - last_start_func} секунд')
+        print(f'Время выполнения функции составило {time.time() - start} секунд')
     return wrapper
 
 
@@ -32,5 +32,3 @@ def another_func():
     print('Это та самая функция')
 
 another_func()
-
-print(last_start_func)
