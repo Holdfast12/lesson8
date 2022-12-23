@@ -6,15 +6,31 @@
 """
 import time
 
-#функция 
+#время последнего запуска функции another
+last_start_func = 0
+
+#декоратор логирования 
 def logging(func):
     def wrapper():
         func()
-        with open('')
+        with open('log.txt', 'a') as file:
+            file.write(f'{time.ctime()} Произошло логируемое выполнение функции\n')
     return wrapper
 
+#декоратор времени выполнения
+def timing(func):
+    def wrapper():
+        last_start_func = time.time()
+        func()
+        print(f'Время выполнения функции составило {time.time() - last_start_func} секунд')
+    return wrapper
+
+
 @logging
+@timing
 def another_func():
-    print('Это еще одна функция')
+    print('Это та самая функция')
 
 another_func()
+
+print(last_start_func)
