@@ -24,18 +24,14 @@ class Human(Mammals):
 
 class Cat(Mammals):
     def __init__(self, breed):
-        #порода
+        # порода
         self.breed = breed
     def voice(self):
         print('мяу')
 
 class Dog(Mammals):
     def __init__(self, breed):
-        #порода
+        # порода
         self.breed = breed
     def voice(self):
         print('гав')
-
-Vasya = Human(90, 180, 40, 'Вася', 'male')
-
-print(Vasya.name)
