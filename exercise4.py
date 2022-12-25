@@ -11,7 +11,7 @@ def logging(func):
     """Декоратор, логирующий выполнение декорируемой функции в файл"""
     def wrapper():
         func()
-        with open('log.txt', 'a') as file:
+        with open('log.txt', 'a', encoding="utf-8") as file:
             file.write(f'{time.ctime()} Произошло логируемое выполнение функции\n')
     return wrapper
 
