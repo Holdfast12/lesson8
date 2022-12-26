@@ -9,6 +9,9 @@
 from exercise1 import Human
 
 class Student(Human):
+    """Класс Студент.
+    Параметр hw_points - количество сданных ДЗ
+    """
     def __init__(self, weight, height, age, name, gender, hw_points):
         super().__init__(weight, height, age, name, gender)
         self.hw_points = hw_points
@@ -25,3 +28,6 @@ Vova = Student(70, 175, 20, 'Вова', 'male', 30)
 print(Vasya.hw_points)
 print(Vova.hw_points)
 print(Vasya <= Vova)
+print(Vasya >= Vova)
+print(Vasya == Vova)
+print(Vasya != Vova)

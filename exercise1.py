@@ -23,15 +23,17 @@ class Human(Mammals):
         print(f'Привет, я {self.name}')
 
 class Cat(Mammals):
-    def __init__(self, breed):
+    def __init__(self, breed, color):
         # порода
         self.breed = breed
+        self.color = color
     def voice(self):
         print('мяу')
 
 class Dog(Mammals):
-    def __init__(self, breed):
+    def __init__(self, breed, color):
         # порода
         self.breed = breed
+        self.color = color
     def voice(self):
         print('гав')

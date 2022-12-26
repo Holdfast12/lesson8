@@ -33,7 +33,7 @@ def call_limit(func):
     last = [time.time() - latency]
     def wrapper():
         if time.time() - last[0] < latency:
-            print('Слишком частый вызов функции')
+            print(f'Слишком частый вызов функции.')
         else:
             last[0] = time.time()
             func()
