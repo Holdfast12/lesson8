@@ -57,6 +57,7 @@ class Cat(Mammals):
         """Метод кошки для разговора"""
         print('мяу')
 
+
 class Dog(Mammals):
     """Класс собака.
     Параметр breed - порода
